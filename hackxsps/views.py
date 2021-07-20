@@ -43,7 +43,7 @@ def registration(request):
         return redirect(request,"submitted.html",{"status":res,"Registered":regstudentdata})
         
         
-    return render(request,"submitted.html",{"Registered":regstudentdata})
+    return redirect(request,"submitted.html",{"Registered":regstudentdata})
 
 
 
