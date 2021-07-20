@@ -1,5 +1,7 @@
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import render, HttpResponse
 from hackxsps.models import Registration
+from django.core.mail import send_mail
 
 
 
@@ -36,17 +38,21 @@ def registration(request):
         teammememail3=request.POST['teammememail3']
         teammemname4=request.POST['teammemname3']
         teammememail4=request.POST['teammememail3']
+
+        
         
 
 
         studentdata = Registration(firstname=firstname, lastname=lastname, email=email, phone=phone, college=college, year=year, stream=stream,track=track, teamnum=teamnum, teamname=teamname, teammemname1=teammemname1, teammememail1=teammememail1, teammemname2=teammemname2, teammememail2=teammememail2, teammemname3=teammemname3, teammememail3=teammememail3,teammemname4=teammemname4, teammememail4=teammememail4)  
 
         studentdata.save()
-        res = "Dear {} Thanks for your registration".format(firstname)
+        res = "Dear {} Thanks for your registration. Join our Discord - https://discord.gg/W3Sv8RnR4X".format(firstname)
         return render(request,"registration.html",{"status":res,"Registered":regstudentdata})
         
         
+    
     return render(request,"registration.html",{"Registered":regstudentdata})
+        
 
 
 

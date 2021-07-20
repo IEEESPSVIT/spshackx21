@@ -28,6 +28,17 @@
         
 <body>
     <b>
+      <section class="text-gray-50 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+            <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-50">{{ status }}</h1>
+            
+          </div>
+        </div>
+      </section>
+
+
+
       <form action="/registration" method="POST">
         {% csrf_token %}
         <section class="text-gray-50 body-font relative">
@@ -207,7 +218,7 @@
         
         </section>
       </form>
-      <div class="p-2 w-full">
+ <!---    <div class="p-2 w-full">
         <div class="relative">
           <label for="teaming" class="leading-7 text-sm text-gray-50">After Clicking Submit, Click here to check if your submission was successful.</label>
           
@@ -215,7 +226,7 @@
       </div>
       <div class="p-2 w-full">
         <a href="/submitted" ><button class="flex mx-auto text-white bg-pink-700 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Check If submission Success Full</button></a>
-      </div>
+      </div>--> 
     </b>
 
 </div>
