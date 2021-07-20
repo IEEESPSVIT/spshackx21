@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from hackxsps.models import Registration
+from django.shortcuts import redirect
+
 
 # Create your views here.
 def index(request):
@@ -38,10 +40,10 @@ def registration(request):
 
         studentdata.save()
         res = "Dear {} Thanks for your registration".format(firstname)
-        return render(request,"registration.html",{"status":res,"Registered":regstudentdata})
+        return redirect(request,"submitted.html",{"status":res,"Registered":regstudentdata})
         
         
-    return render(request,"registration.html",{"Registered":regstudentdata})
+    return render(request,"submitted.html",{"Registered":regstudentdata})
 
 
 
