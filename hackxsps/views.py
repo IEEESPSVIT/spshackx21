@@ -46,7 +46,7 @@ def registration(request):
         studentdata = Registration(firstname=firstname, lastname=lastname, email=email, phone=phone, college=college, year=year, stream=stream,track=track, teamnum=teamnum, teamname=teamname, teammemname1=teammemname1, teammememail1=teammememail1, teammemname2=teammemname2, teammememail2=teammememail2, teammemname3=teammemname3, teammememail3=teammememail3,teammemname4=teammemname4, teammememail4=teammememail4)  
 
         studentdata.save()
-        res = "Dear {} Thanks for your registration. Join our Discord - https://discord.gg/W3Sv8RnR4X".format(firstname)
+        res = "Dear {} Thanks for your registration. Join our Discord and WhatsApp for more information!!".format(firstname)
         return render(request,"registration.html",{"status":res,"Registered":regstudentdata})
         
         
