@@ -12,7 +12,7 @@ class Registration(models.Model):
     college = models.CharField(max_length=100)
     year = models.CharField(max_length=1)
     stream = models.CharField(max_length=60)
-    domain = models.CharField(max_length=60)
+    track = models.CharField(max_length=60)
     teamnum = models.CharField(max_length=1)
     teamname = models.CharField(max_length=50)
     teammemname1 = models.CharField(max_length=100)
@@ -28,4 +28,4 @@ class Registration(models.Model):
 
 
     def __str__(self):
-        return self.firstname + ' ' + self.lastname + ' ' + self.team
+        return self.firstname + ' ' + self.lastname + ' ' + self.teamnum
