@@ -72,6 +72,10 @@ def projects(request):
         #return HttpResponse("This is my contacts page")
     return render(request, 'projects.html')
 
+def submitted(request):
+        #return HttpResponse("This is my contacts page")
+    return render(request, 'submitted.html')
+
 
 
 def table(request):
