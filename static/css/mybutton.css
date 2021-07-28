@@ -34,10 +34,10 @@
   }
   
   #testbutton:after {
-    content:'Register Now';
+    content:'SUBMISSIONS';
     text-align:center;
     line-height:35px;
-    font-size:12px;
+    font-size:11px;
     color:rgba(235,235,235,1);
     font-weight:bold;
     z-index:5;
