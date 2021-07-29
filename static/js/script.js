@@ -63,7 +63,7 @@
       }, 0);
   })();*/
 
-  var deadline = new Date("Jul 29, 2021 10:00:00").getTime(); 
+  var deadline = new Date("Jul 29, 2021 17:00:00").getTime(); 
   
   var x = setInterval(function() { 
     
@@ -79,7 +79,7 @@
   document.getElementById("second").innerHTML =seconds;  
   if (t < 0) { 
           clearInterval(x); 
-          document.getElementById("demo").innerHTML = "TIME UP"; 
+          document.getElementById("demo").innerHTML = ""; 
           document.getElementById("day").innerHTML ='0'; 
           document.getElementById("hour").innerHTML ='0'; 
           document.getElementById("minute").innerHTML ='0' ;  
